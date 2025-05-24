@@ -17,6 +17,14 @@ public class Message implements Serializable {
         time = LocalTime.now();
     }
 
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     @Override
     public String toString() {
         return nickName + " [" + time.format(DateTimeFormatter.ofPattern("HH:mm")) + "] " + message;
